@@ -1,0 +1,126 @@
+button {
+    white-space: nowrap;
+
+    &.btn-round {
+        border: none;
+        outline: none;
+    }
+}
+
+a {
+
+    &.btn-round {
+        display: inline-flex;
+        align-items: center;
+    }
+}
+
+.btn-round {
+    transition: $trans;
+    background-color: $main-red;
+    border-radius: 47px;
+    display: inline-block;
+    cursor: pointer;
+    color: white;
+    font-size: 31px;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    padding: 0 55px;
+    height: 94px;
+
+    &:hover {
+        background-color: $btn-hover;
+    }
+
+    @include media (w1024) {
+        border-radius: 36px;
+        font-size: 24px;
+        padding: 0 20px;
+        height: 72px;
+    }
+
+    @include media (w768) {
+        justify-content: center;
+        border-radius: 32px;
+        font-size: 21px;
+        padding: 0 10px;
+        height: 64px;
+        width: 100%;
+    }
+
+    &_white {
+        background-color: white;
+        color: black;
+
+        &:hover {
+            color: white;
+        }
+    }
+
+    &_border {
+        background-color: transparent;
+        border: 2px solid white;
+
+        &:hover {
+            background-color: white;
+            color: black;
+        }
+    }
+
+    &_download {
+        margin-bottom: 60px;
+        position: relative;
+
+        &:after {
+            background-image: url("../img/icon-download-arrow.png");
+            background-position: left center;
+            background-repeat: no-repeat;
+            transform: translateX(-50%);
+            content: "PDF 20Mb";
+            color: white;
+            font-size: 23px;
+            padding-left: 20px;
+            position: absolute;
+            top: calc(100% + 20px);
+            left: 50%;
+            white-space: nowrap;
+        }
+    }
+
+    &_download-column {
+        margin-bottom: 50px;
+
+        &:after {
+            transform: translateX(-50%);
+            position: absolute;
+            left: 50%;
+            top: calc(100% + 10px);
+        }
+    }
+
+    &_clear {
+        
+        &:after {
+            content: none;
+        }
+    }
+}
+
+@keyframes btnAnimRed {
+    from {
+        box-shadow: 0 0 8px 6px $main-red, 0 0 12px 14px $main-red;
+    }
+    to {
+        box-shadow: 0 0 18px 6px rgba(255, 48, 26, 0), 0 0 4px 71px rgba(255, 48, 26, 0);
+    }
+}
+
+@keyframes btnAnimWhite {
+    from {
+        box-shadow: 0 0 8px 6px white, 0 0 12px 14px white;
+    }
+    to {
+        box-shadow: 0 0 18px 6px rgba(255, 48, 26, 0), 0 0 4px 71px rgba(255, 48, 26, 0);
+    }
+}

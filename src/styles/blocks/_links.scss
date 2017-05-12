@@ -1,0 +1,20 @@
+a {
+    cursor: pointer;
+    display: inline-block;
+    transition: $trans;
+}
+
+.link {
+    text-decoration: none;
+
+    &_getcall {
+        border-bottom: 2px dotted currentColor;
+        color: white;
+        font-family: "PTSerif", sans-serif;
+        font-size: 20px;
+
+        @include media(w1024) {
+            font-size: 15px;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+div#bottomFormContainer.bottom-form-container
+    p.text.text_xxl.black.
+        Проверьте доступность вашего города для старта прямо сейчас
+    p.text.text_m.medium.mb2.
+        Если город не занят одним из наших партнёров – мы перезвоним вам для обсуждения сотрудничества.
+    form(data-next="#bigForm")#bottomForm.bottom-form
+        label.bottom-form__label
+            input(type="text" name="city" placeholder="Ваш город" required).input
+        label.bottom-form__label
+            input(type="text" name="phone" placeholder="Телефон" required).input
+        label.bottom-form__label
+            input(type="email" name="email" placeholder="E-mail" required).input
+        label.bottom-form__label
+            button.btn-round.bottom-form__btn.btn-round_white.
+                Проверить

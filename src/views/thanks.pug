@@ -1,0 +1,21 @@
+extends templates/layout
+
+block vars
+    - var title = 'Main'
+
+block content
+    section.sec.thanks
+        include components/header
+        div.container.color-white.ta-center
+            p.thanks__heading.
+                <span id="thanksName"></span>наши</span> менеджеры уже занимаются вашей заявкой
+            p.thanks__title.text.text_xl.ff-ptserif.mb1.
+                Мы свяжемся с Вами в ближайшее время
+            p.thanks__subtitle.mb2.
+                График работы: с 9 00 до 18 00. Поэтому, если вы оставили заявку в нерабочее время, мы перезвоним вам на следующий день
+            div.thanks__buttons
+                a(href="doc/mk.pdf" target="_blank").btn-round.btn-round_white.thanks__button.
+                    Скачать презентацию
+                a(href="/index.html").btn-round.btn-round_border.
+                    Вернуться на сайт
+                    

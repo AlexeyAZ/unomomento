@@ -1,0 +1,74 @@
+.header {
+    padding-top: 30px;
+    margin-bottom: 180px;
+
+    @include media(w1024) {
+        margin-bottom: 84px;
+    }
+
+    @include media(w768) {
+        margin-bottom: 42px;
+    }
+	
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        @include media(w768) {
+            flex-direction: column;
+            padding-top: 10px;
+        }
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 20px;
+        font-family: "PTSerif", Arial, Helvetica, sans-serif;
+        text-decoration: none;
+
+        @include media(w768) {
+            font-size: 12px;
+        }
+    }
+
+    &__logo-img {
+        margin-right: 20px;
+        //width: 140px;
+
+        @include media(w768) {
+            margin-right: 10px;
+            max-width: 100px;
+        }
+    }
+
+    &__item {
+
+        &_logo {
+
+            @include media(w768) {
+                margin-bottom: 20px;
+            }
+        }
+
+        &_contacts {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+
+            @include media(w768) {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+            }
+        }
+    }
+
+    &__link {
+        color: white;
+    }
+}

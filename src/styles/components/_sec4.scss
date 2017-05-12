@@ -1,0 +1,54 @@
+.sec4 {
+    background-image: url("../img/sec4-bg.jpg");
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    @include media(w1024) {
+        background-position: left 25% center;
+        padding-top: 50px;
+    }
+
+    @include media(w768) {
+        background-image: none;
+        background-color: #00af4a;
+        padding-top: 30px;
+        padding-bottom: 0;
+    }
+
+    &__text {
+        padding-right: 45%;
+
+        @include media(w1024) {
+            padding-right: 15%;
+        }
+
+        @include media(w768) {
+            padding-right: 0;
+            text-align: center;
+        }
+    }
+
+    &__border-text {
+        border-bottom: 3px solid white;
+        white-space: nowrap;
+    }
+
+    &__img-phone-container {
+        display: none;
+
+        @include media(w768) {
+            display: block;
+            margin-right: -18px;
+            margin-left: -18px;
+        }
+    }
+
+    &__img-phone {
+        display: none;
+
+        @include media(w768) {
+            display: block;
+            width: 100%;
+        }
+    }
+}

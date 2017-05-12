@@ -1,0 +1,112 @@
+.sec3 {
+    overflow: hidden;
+    padding-top: 80px;
+
+    @include media(w1024) {
+        padding-top: 50px;
+    }
+
+    @include media(w768) {
+        padding-top: 30px;
+    }
+
+    &__block {
+        padding-right: 40%;
+
+        @include media(w1024) {
+            text-align: center;
+            padding-right: 0;
+        }
+    }
+
+    &__list-container {
+        padding-bottom: 80px;
+        position: relative;
+
+        @include media(w768) {
+            padding-bottom: 0;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        position: relative;
+        z-index: 1;
+
+        @include media(w1024) {
+            text-align: left;
+            width: 46%;
+        }
+
+        @include media(w768) {
+            margin-bottom: 10px;
+            width: 100%;
+        }
+    }
+
+    &__list-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+        width: 48%;
+
+        @include media(w1024) {
+            width: 100%;
+        }
+    }
+
+    &__list-img {
+        margin-right: 20px;
+        flex-shrink: 0;
+    }
+
+    &__list-text {
+        font-size: 18px;
+        flex-shrink: 1;
+    }
+
+    &__btn-wrap {
+        position: relative;
+        z-index: 1;
+
+        @include media(w1024) {
+            text-align: left;
+        }
+    }
+
+    &__img-pc {
+        position: absolute;
+        left: 60%;
+        bottom: 0;
+        height: 100%;
+
+        @include media(w1024) {
+            display: none;
+        }
+    }
+
+    &__img-phone {
+        display: none;
+
+        @include media(w1024) {
+            transform: translateX(44%);
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+        }
+
+        @include media(w768) {
+            transform: translateX(10%);
+            display: block;
+            margin-right: -18px;
+            position: static;
+            height: auto;
+            width: 110%;
+        }
+    }
+}

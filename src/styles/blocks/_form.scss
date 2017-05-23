@@ -1,7 +1,7 @@
 $form-input-border: #8f8f8f;
 $form-input-bg: #e1e1e1;
 
-$form-input-height: 62px;
+$form-input-height: 64px;
 $form-input-padding: 25px;
 
 .form-wrap {
@@ -37,6 +37,7 @@ $form-input-padding: 25px;
 }
 .form-container {
     background-color: white;
+    border-radius: 18px;
     display: inline-block;
     text-align: left;
     opacity: 0;
@@ -113,8 +114,9 @@ $form-input-padding: 25px;
     }
 
     &__select {
-        background-color: $form-input-bg;
+        ///background-color: $form-input-bg;
         border: 1px solid $form-input-border;
+        border-radius: 32px;
         color: #3f3e3c;
         font-size: 22px;
         margin-bottom: 20px;
@@ -127,7 +129,7 @@ $form-input-padding: 25px;
         @include placeholder {
             color: #3f3e3c;
         }
-        background-color: $form-input-bg;
+        //background-color: $form-input-bg;
         border: 1px solid $form-input-border;
         color: #3f3e3c;
         font-size: 22px;
@@ -135,11 +137,17 @@ $form-input-padding: 25px;
         padding: 0 $form-input-padding;
         height: $form-input-height;
         width: 100%;
+
+        @include media(w768) {
+            border-radius: 32px;
+        }
     }
 
     &__btn {
         position: relative;
         font-size: 22px;
+        height: $form-input-height;
+        width: 100%;
 
         &_center {
             display: block;

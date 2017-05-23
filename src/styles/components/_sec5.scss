@@ -1,5 +1,6 @@
 $sec5-list-circle-size: 178px;
 $sec5-list-circle-small-size: 62px;
+$sec5-list-circle-small-size-hover: 72px;
 
 .sec5 {
     padding-top: 80px;
@@ -47,6 +48,7 @@ $sec5-list-circle-small-size: 62px;
         width: $sec5-list-circle-size;
 
         &:before {
+            transition: $trans;
             content: counter(item);
             background-color: #d5ecd3;
             box-sizing: content-box;
@@ -63,6 +65,16 @@ $sec5-list-circle-small-size: 62px;
             right: -30px;
             height: $sec5-list-circle-small-size;
             width: $sec5-list-circle-small-size;
+        }
+
+        &:hover {
+
+            &:before {
+                top: -5px;
+                right: -40px;
+                height: $sec5-list-circle-small-size-hover;
+                width: $sec5-list-circle-small-size-hover;
+            }
         }
     }
 
@@ -86,8 +98,9 @@ $sec5-list-circle-small-size: 62px;
         }
 
         &_3 {
-            left: 15px;
-            bottom: -10px;
+            transform: translateX(-50%);
+            left: 50%;
+            bottom: -2px;
         }
 
         &_4 {

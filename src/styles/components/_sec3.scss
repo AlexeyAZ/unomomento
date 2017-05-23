@@ -32,7 +32,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        margin-bottom: 30px;
+        margin-bottom: 10px;
         position: relative;
         z-index: 1;
 
@@ -66,6 +66,16 @@
     &__list-text {
         font-size: 18px;
         flex-shrink: 1;
+    }
+
+    &__list-subtext {
+        text-align: left;
+        position: relative;
+        z-index: 1;
+
+        @include media(w768) {
+            text-align: center;
+        }
     }
 
     &__btn-wrap {

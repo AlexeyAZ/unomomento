@@ -1,5 +1,5 @@
 <?php
-$sendto = "alex_z@franch5.ru, zvnfranch5@yandex.ru, franchaizing-5@yandex.ru";
+$sendto = "alex_z@mail.franch5.ru, zvnfranch5@yandex.ru, franchaizing-5@yandex.ru, uno@uno-perm.ru";
 $city = nl2br($_POST['city']);
 $age = nl2br($_POST['age']);
 $business = nl2br($_POST['business']);
@@ -7,7 +7,7 @@ $volume = nl2br($_POST['volume']);
 $phone = nl2br($_POST['phone1']);
 $name = nl2br($_POST['name1']);
 
-$content = "Заявка с сайта ";
+$content = "Заявка с сайта Уномоменто";
 // Формирование заголовка письма
 $subject  = $content;
 $headers  = "From: no-reply@no-reply.ru" . "\r\n";

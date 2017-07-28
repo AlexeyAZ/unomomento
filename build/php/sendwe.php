@@ -1,5 +1,6 @@
 <?php
 $sendto = nl2br($_POST['email']);
+$sendname = nl2br($_POST['name']);
 
 $content = "Заявка с сайта Уномоменто";
 // Формирование заголовка письма
@@ -8,8 +9,40 @@ $headers  = "From: no-reply@no-reply.ru" . "\r\n";
 $headers .= "Reply-To: Без ответа". "\r\n";
 $headers .= "MIME-Version: 1.0\r\n";
 $headers .= "Content-Type: text/html;charset=utf-8 \r\n";
+
 // Формирование тела письма
-$msg  = '';
+$msg  = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title></title>
+        <style></style>
+    </head>
+    <body>
+        <table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable">
+            <tr>
+                <td align="center" valign="top">
+                    <table border="0" cellpadding="20" cellspacing="0" width="100%" id="emailContainer">
+                        <tr>
+                            <td align="center" valign="top" style="font-size:0;padding-bottom:0;">
+                                <span style="color:black; font: 24px Arial, sans-serif; line-height: 30px; -webkit-text-size-adjust:none; display: block;text-align:center;">Добрый день, ';
+$msg .= $sendname;
+$msg .= '</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" valign="top" style="font-size:0;">
+                                <img src="http://savepic.ru/14093430.jpg" alt="" alt="Мы очень рады, что Вы проявили интерес к нашему бизнесу" border="0" width="100%" style="display:block;margin:0;padding:0;">
+                                <a href="https://uno-perm.ru/" style="color: black; font: 19px Arial, sans-serif; -webkit-text-size-adjust:none; display: block;margin:0;padding:0;background-color:white;">https://uno-perm.ru/</a>
+                                <a href="https://vk.com/unohimchistka" style="color: black; font: 19px Arial, sans-serif; -webkit-text-size-adjust:none; display: block;margin:0;padding:5px 0 30px;background-color:white;">https://vk.com/unohimchistka</a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>';
 
 // отправка сообщения
 if(@mail($sendto, $subject, $msg, $headers)) {

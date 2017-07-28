@@ -85,7 +85,10 @@ gulp.task('pug', function() {
     .pipe(gulp.dest(properties.folders.build))
     .on('end', function(){
         gulp.src(properties.folders.build + '/**/*.html')
-            .pipe(typograf({ locale: ['ru', 'en-US'] }))
+            .pipe(typograf({
+                locale: ['ru', 'en-US'],
+                enableRule: ["common/nbsp/afterNumber"]
+            }))
             .pipe(gulp.dest(properties.folders.build))
             .pipe(bs.stream({once: true}));
     });
